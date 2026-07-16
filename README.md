@@ -20,33 +20,44 @@ said at all. They compose fine; essence doesn't touch phrasing style.
 
 ## Before / after
 
+**Chat reply** — the same input, shown two ways, to make the axis concrete:
+```
+Before:  Great question! So, not to reopen what we already decided on the retry
+         logic, but I noticed something worth flagging: right now if the API call
+         fails, we just log the error and swallow it, so the caller has no way of
+         knowing the write didn't actually happen. I think it'd probably be a good
+         idea to return an error here, though I could be wrong about the approach.
+
+essence: If the API call fails, the error is logged and swallowed — the caller has
+         no way to know the write didn't happen. Return the error so the caller
+         can decide what to do.
+
+caveman: API fail: error logged, swallowed. Caller unaware write skip. Return
+         error, caller decide.
+```
+essence cuts "great question", "not to reopen what we decided", and the hedging —
+but keeps full sentences. caveman would additionally drop articles and fragment
+the grammar. Different axis, same input.
+
 **Code comment**
 ```
-Before: // This function fetches the user's profile from the database and
-        // returns it, handling the case where the profile might not exist yet
-After:  // profile may not exist yet (new users) — caller must handle nil
-```
-
-**Chat reply** (contrast with caveman: still full sentences, not fragments)
-```
-Before: Sure! I'd be happy to help with that. So looking at your code, I think the
-        issue you're experiencing is likely caused by the fact that you're creating
-        a new object reference on each render, since when you pass an inline object
-        as a prop, React's shallow comparison sees it as a different object every time.
-After:  The inline object prop creates a new reference on every render, so React's
-        shallow comparison always sees it as different and re-renders. Wrap it in useMemo.
+Before: // Fetches the user's profile from the database and returns it. Handles
+        // the case where the profile doesn't exist yet for brand-new users who
+        // haven't finished onboarding.
+After:  // profile may be missing until onboarding completes — caller must handle nil
 ```
 
 **PR description**
 ```
-Before: As discussed, I'm not proposing we fold this into the existing check — just
-        adding a new one. Per the trace you shared, it crashes at line 42 because
-        the token can be null there.
+Before: Per our discussion, I split this into two PRs instead of one big one like
+        you suggested. This one only covers the backend endpoint — I didn't touch
+        the frontend since we agreed that could land as a follow-up once the API
+        is stable.
 After:  ## Bug
-        Auth middleware crashes when `token` is null; the check at line 42
-        dereferences it directly.
+        No endpoint exists for revoking an API key once issued.
         ## Fix
-        Add a null guard before the dereference.
+        Add `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending
+        API stabilization.
 ```
 
 ## What you get
