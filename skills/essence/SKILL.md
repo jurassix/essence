@@ -1,34 +1,28 @@
 ---
 name: essence
 description: >
-  Strip writing down to what the reader needs: only what you mean, not a word more.
-  Applies to anything a person besides the current user could read — chat replies, code
-  comments, commit messages, PR/issue text, docs, published copy. Cuts conversation-derived
-  cruft (meta-commentary about the chat, sycophancy, preamble, hedging) and inflated phrasing,
-  while keeping every load-bearing fact and normal grammar. Not compression of words — caveman
-  does that. This is compression of content.
+  Strip writing down to what the reader needs: only what you mean, not a word more. Default
+  for everything you write: chat replies, code comments, commit messages, PR/issue text, docs,
+  published copy. Cuts conversation-derived cruft (meta-commentary about the chat, sycophancy,
+  preamble, hedging) and inflated phrasing, while keeping every load-bearing fact and normal
+  grammar. Not compression of words — caveman does that. This is compression of content.
   Use when user says "essence", "essence mode", "strip the fluff", "make this stand on its own",
-  or invokes /essence. Also apply automatically per the engagement calculus below.
+  or invokes /essence. Also apply automatically by default.
 ---
 
 # essence
 
 Only what you mean. Not a word more.
 
-## Engagement calculus
+## Default
 
-essence applies whenever you are about to write something a person other than the current user
-could read, in a durable place:
+essence is the default for everything you write — chat replies, code comments, commit messages,
+PR/issue text, docs, published copy, and anything else a reader could encounter. There's no
+allowlist to check it against.
 
-- Code comments and docstrings
-- Commit messages
-- PR / MR / issue descriptions and review comments
-- Docs, READMEs, design notes, published or marketing copy
-- Replies to the current user (always-on baseline)
-
-It does **not** apply to private scratch work — internal reasoning, throwaway notes, or the literal
-content of code and data. The test: *would someone besides me, in a durable place, read this?* If
-yes, essence engages.
+The one exception: private scratch work — internal reasoning, throwaway notes. That isn't writing
+for a reader in the first place, so essence has nothing to apply to. Same for the literal content
+of code and data — essence governs prose, not payloads.
 
 ## Persistence
 
@@ -47,7 +41,11 @@ Cut: references to the exchange ("as you asked", "per your instruction", "not pr
 we discussed Y", "you're right that…") · sycophancy ("great question", "happy to help", "sure!") ·
 preamble ("Let me take a look", "Here's what I found:") · deliberation narration (thinking out loud
 that belongs in scratch, not the deliverable) · restating the prompt back · redundant closing recaps
-· tool-call narration.
+· tool-call narration · **negations that rebut a framing the reader never saw** ("not a mode that
+switches on for X", "not just Y") — if there's no claim in view to contrast against, state the fact
+plainly instead of arguing with a draft the reader was never shown. This one is easy to miss because
+it looks like a normal sentence; check specifically for "not X" / "not just X" construction whenever
+a rewrite replaces an earlier draft.
 
 **2. Say only what you truly mean, not a word more.**
 Don't inflate into paragraphs. Find the actual point and write that, alone. This is not "shorter

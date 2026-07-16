@@ -2,9 +2,10 @@
 
 **Only what you mean. Not a word more.**
 
-essence strips writing down to what the reader needs. It applies wherever a person besides you
-could read the result: chat replies, code comments, commit messages, PR/issue text, docs,
-published copy.
+essence strips writing down to what the reader needs. It's the default for everything you write:
+chat replies, code comments, commit messages, PR/issue text, docs, published copy, and anything
+else a reader could encounter. The only exception is private scratch work: internal reasoning and
+throwaway notes were never written for a reader, so essence has nothing to apply to.
 
 The idea: writing usually picks up cruft from the conversation that produced it — hedges,
 meta-commentary about what was asked, preamble, restated context. None of that belongs in the
@@ -59,6 +60,17 @@ After:  ## Bug
         Add `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending
         API stabilization.
 ```
+
+**Meta-commentary, caught in the wild** — a real mistake, made while writing this very README:
+```
+Before:  essence is the default for everything you write — not a mode that switches
+         on for certain artifact types.
+essence: essence is the default for everything you write.
+```
+"Not a mode that switches on for certain artifact types" only makes sense to someone who'd just
+watched an earlier, conditional design get replaced with this one. A reader who never saw that
+discussion has no claim in view to weigh the denial against — it reads as arguing with a ghost.
+Same rule, applied to itself: state the fact, drop the rebuttal.
 
 ## What you get
 

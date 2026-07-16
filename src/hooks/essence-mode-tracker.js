@@ -57,10 +57,10 @@ process.stdin.on('end', () => {
         hookSpecificOutput: {
           hookEventName: 'UserPromptSubmit',
           additionalContext:
-            'ESSENCE MODE ACTIVE. Anything a reader besides the current user could see ' +
-            '(chat replies, code comments, commits, PR/issue text, docs) must stand on its ' +
-            'own: no reference to this conversation, no reflexive hedging or preamble, and ' +
-            'only what you actually mean — not a word more. Normal grammar, not telegraphic.'
+            'ESSENCE MODE ACTIVE — default for everything you write (chat replies, code ' +
+            'comments, commits, PR/issue text, docs). Stand on its own: no reference to this ' +
+            'conversation, no reflexive hedging or preamble, and only what you actually mean — ' +
+            'not a word more. Normal grammar, not telegraphic.'
         }
       }));
     }

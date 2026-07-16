@@ -53,15 +53,15 @@ for (const candidate of candidates) {
 // essentials only, not a full duplicate.
 if (!skillContent) {
   skillContent = [
-    'ESSENCE MODE ACTIVE.',
+    'ESSENCE MODE ACTIVE — default for everything you write: chat replies, code',
+    'comments, commits, PR/issue text, docs, published copy.',
     '1. Make writing stand on its own: cut anything that only makes sense to',
     '   someone who saw this conversation (references to what was asked, hedging',
     '   about a prior draft, meta-commentary about the chat).',
     '2. Say only what you truly mean, not a word more: find the real point of',
     '   each paragraph and write only that.',
     'Keep: every load-bearing fact, code/commands/URLs/paths verbatim, normal',
-    'grammar (not telegraphic). Applies to chat replies, code comments, commits,',
-    'PR/issue text, docs, published copy. Off: "stop essence" / "normal mode".'
+    'grammar (not telegraphic). Off: "stop essence" / "normal mode".'
   ].join('\n');
 }
 
