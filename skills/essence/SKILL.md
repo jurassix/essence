@@ -56,6 +56,13 @@ perhaps") · restating a point a second way "to be safe" · any reader-facing se
 doesn't need. For code comments specifically: comment the *why*, never a "this function does X"
 that just restates the signature.
 
+De-hedge, don't delete. A hedge often wraps a real caveat: "it might be worth considering that
+this fails under high concurrency" is reflexive packaging around a genuine fact. Cut the wrapper,
+keep the fact: "this fails under high concurrency." Deleting the whole sentence loses information;
+stating it plainly loses nothing. Test before cutting: would this change what the reader does
+next? If yes, it's genuine; state it plainly and keep it. If cutting it only changes how confident
+the sentence sounds, it's reflexive; cut it.
+
 ## Keep: never cut
 
 - Every fact, decision, tradeoff, and caveat the reader actually needs
@@ -68,8 +75,9 @@ that just restates the signature.
 ## Two-pass rule
 
 After drafting a reader-facing artifact, reread it once specifically hunting for: a sentence that
-only makes sense if the reader saw the conversation, and a sentence that says something already said.
-Cut both. The first pass is rarely tight enough.
+only makes sense if the reader saw the conversation, a sentence that says something already said,
+and a caveat that got cut along with the hedge wrapping it. Fix all three. The first pass is rarely
+tight enough.
 
 ## Boundaries
 
