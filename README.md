@@ -2,21 +2,19 @@
 
 **Only what you mean. Not a word more.**
 
-essence strips writing down to what the reader needs. It's the default for everything you write:
-chat replies, code comments, commit messages, PR/issue text, docs, published copy, and anything
-else a reader could encounter. The only exception is private scratch work: internal reasoning and
-throwaway notes were never written for a reader, so essence has nothing to apply to.
+essence strips writing down to what the reader needs — chat replies, code comments, commit
+messages, PR/issue text, docs, published copy. The exception is private scratch work: internal
+reasoning and throwaway notes were never written for a reader.
 
-The idea: writing usually picks up cruft from the conversation that produced it — hedges,
-meta-commentary about what was asked, preamble, restated context. None of that belongs in the
-deliverable. A reader who never saw that conversation should understand it fully, and find nothing
-in it that refers back to something they weren't part of.
+Writing usually picks up cruft from the conversation that produced it — hedges, meta-commentary
+about what was asked, preamble, restated context. A reader who never saw that conversation should
+understand the result fully, with nothing in it that refers back to something they weren't part of.
 
 ## essence vs [caveman](https://github.com/JuliusBrussee/caveman)
 
 Caveman compresses *words* — telegraphic grammar, dropped articles, same content in fewer tokens.
-essence filters *content* — full grammar, full sentences, but only the sentences that are actually
-load-bearing. Different axis: caveman changes *how* something is said, essence changes *what* gets
+essence filters *content* — full grammar, full sentences, but only the sentences that actually
+carry meaning. Different axis: caveman changes *how* something is said, essence changes *what* gets
 said at all. They compose fine; essence doesn't touch phrasing style.
 
 ## Before / after
@@ -37,8 +35,7 @@ caveman: API fail: error logged, swallowed. Caller unaware write skip. Return
          error, caller decide.
 ```
 essence cuts "great question", "not to reopen what we decided", and the hedging —
-but keeps full sentences. caveman would additionally drop articles and fragment
-the grammar. Different axis, same input.
+but keeps full sentences and normal grammar.
 
 **Code comment**
 ```
@@ -68,9 +65,8 @@ Before:  essence is the default for everything you write — not a mode that swi
 essence: essence is the default for everything you write.
 ```
 "Not a mode that switches on for certain artifact types" only makes sense to someone who'd just
-watched an earlier, conditional design get replaced with this one. A reader who never saw that
-discussion has no claim in view to weigh the denial against — it reads as arguing with a ghost.
-Same rule, applied to itself: state the fact, drop the rebuttal.
+watched an earlier, conditional design get replaced with this one — arguing with a draft the reader
+never saw. Same rule, applied to itself: state the fact, drop the rebuttal.
 
 ## What you get
 

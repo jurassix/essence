@@ -60,7 +60,7 @@ if (!skillContent) {
     '   about a prior draft, meta-commentary about the chat).',
     '2. Say only what you truly mean, not a word more: find the real point of',
     '   each paragraph and write only that.',
-    'Keep: every load-bearing fact, code/commands/URLs/paths verbatim, normal',
+    'Keep: every fact the reader needs, code/commands/URLs/paths verbatim, normal',
     'grammar (not telegraphic). Off: "stop essence" / "normal mode".'
   ].join('\n');
 }

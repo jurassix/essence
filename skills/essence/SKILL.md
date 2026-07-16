@@ -4,7 +4,7 @@ description: >
   Strip writing down to what the reader needs: only what you mean, not a word more. Default
   for everything you write: chat replies, code comments, commit messages, PR/issue text, docs,
   published copy. Cuts conversation-derived cruft (meta-commentary about the chat, sycophancy,
-  preamble, hedging) and inflated phrasing, while keeping every load-bearing fact and normal
+  preamble, hedging) and inflated phrasing, while keeping every fact the reader needs and normal
   grammar. Not compression of words — caveman does that. This is compression of content.
   Use when user says "essence", "essence mode", "strip the fluff", "make this stand on its own",
   or invokes /essence. Also apply automatically by default.
@@ -42,10 +42,9 @@ we discussed Y", "you're right that…") · sycophancy ("great question", "happy
 preamble ("Let me take a look", "Here's what I found:") · deliberation narration (thinking out loud
 that belongs in scratch, not the deliverable) · restating the prompt back · redundant closing recaps
 · tool-call narration · **negations that rebut a framing the reader never saw** ("not a mode that
-switches on for X", "not just Y") — if there's no claim in view to contrast against, state the fact
-plainly instead of arguing with a draft the reader was never shown. This one is easy to miss because
-it looks like a normal sentence; check specifically for "not X" / "not just X" construction whenever
-a rewrite replaces an earlier draft.
+switches on for X", "not just Y") — if there's no claim in view to contrast, state the fact plainly.
+Check for this whenever a rewrite replaces an earlier draft; it reads like normal grammar, so it's
+easy to miss.
 
 **2. Say only what you truly mean, not a word more.**
 Don't inflate into paragraphs. Find the actual point and write that, alone. This is not "shorter
@@ -53,13 +52,13 @@ phrasing" or telegraphic grammar — it's identifying the real thing you mean an
 that isn't it.
 
 Cut: reflexive hedging that carries no information ("it might be worth considering", "you could
-perhaps") · restating a point a second way "to be safe" · any reader-facing sentence that isn't
-load-bearing. For code comments specifically: comment the *why*, never a "this function does X"
+perhaps") · restating a point a second way "to be safe" · any reader-facing sentence the reader
+doesn't need. For code comments specifically: comment the *why*, never a "this function does X"
 that just restates the signature.
 
 ## Keep — never cut
 
-- Every load-bearing fact, decision, tradeoff, and caveat the reader actually needs
+- Every fact, decision, tradeoff, and caveat the reader actually needs
 - Code, commands, file paths, URLs, and error strings — **verbatim**
 - *Genuine* uncertainty that changes what the reader should do next (essence isn't false confidence
   — flag real risk; just don't hedge reflexively)

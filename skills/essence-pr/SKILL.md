@@ -2,7 +2,7 @@
 name: essence-pr
 description: >
   Write a PR/MR description that stands on its own: the bug and the proposed fix, nothing else.
-  No conversation residue, no test-plan padding unless load-bearing. Use when user says
+  No conversation residue, no test-plan padding unless it's needed. Use when user says
   "write a PR description", "PR description", or invokes /essence-pr.
 ---
 
@@ -23,7 +23,7 @@ Two sections, nothing more unless the change genuinely needs it:
 <what changed and why this is the correct fix — not a narration of the diff>
 ```
 
-Add a third section only when it's load-bearing:
+Add a third section only when the reviewer actually needs it:
 - **Test plan** — only if verification isn't obvious from CI, or a manual repro step is required
 - **Breaking change / migration note** — only if one actually exists
 

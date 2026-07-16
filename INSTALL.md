@@ -73,4 +73,4 @@ agent's rules file — `AGENTS.md`, `GEMINI.md`, `.cursor/rules/essence.md`,
 Any agent that reads a plain instructions file (a `CLAUDE.md`/`AGENTS.md`-style convention) can use
 essence today via the manual copy above, even if it isn't in the detection list yet. Broader
 one-command coverage (an entry in a shared skills registry, the way caveman covers 30+ agents) is
-future work — see the README's "out of scope for v1" note.
+future work.
