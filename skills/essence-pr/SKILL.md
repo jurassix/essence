@@ -20,22 +20,22 @@ Two sections, nothing more unless the change genuinely needs it:
 <what was broken, in terms a reviewer who never saw the issue can verify against the diff>
 
 ## Fix
-<what changed and why this is the correct fix — not a narration of the diff>
+<what changed and why this is the correct fix, not a narration of the diff>
 ```
 
 Add a third section only when the reviewer actually needs it:
-- **Test plan** — only if verification isn't obvious from CI, or a manual repro step is required
-- **Breaking change / migration note** — only if one actually exists
+- **Test plan**: only if verification isn't obvious from CI, or a manual repro step is required
+- **Breaking change / migration note**: only if one actually exists
 
 ## What never goes in
 
-- "As discussed", "per your feedback", "you asked me to split this up" — the reviewer wasn't there
-- Restating the diff line-by-line — the diff already shows *what*; the description explains *why*
+- "As discussed", "per your feedback", "you asked me to split this up": the reviewer wasn't there
+- Restating the diff line-by-line: the diff already shows *what*; the description explains *why*
   it's the right fix
-- Hedging about scope ("not proposing to also fix X") — if it's out of scope, just don't mention it
+- Hedging about scope ("not proposing to also fix X"): if it's out of scope, just don't mention it
 - Filler acknowledgments, sign-offs, or AI attribution
 
 ## Boundaries
 
-Generates the description text only — does not run `gh pr create` or push. If asked to update an
+Generates the description text only; does not run `gh pr create` or push. If asked to update an
 existing PR, produce the replacement text; let the user apply it.

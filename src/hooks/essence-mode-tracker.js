@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// essence — UserPromptSubmit hook: tracks on/off state and reinforces the
+// essence (UserPromptSubmit hook): tracks on/off state and reinforces the
 // ruleset every turn (SessionStart only runs once; models drift back to
 // verbose mid-conversation without a per-turn nudge).
 
@@ -49,7 +49,7 @@ process.stdin.on('end', () => {
       safeWriteFlag(flagPath, 'on');
     }
 
-    // readFlag enforces symlink-safe read + size cap + whitelist — never
+    // readFlag enforces symlink-safe read + size cap + whitelist: never
     // trust arbitrary bytes at a predictable dotfile path.
     const activeMode = readFlag(flagPath);
     if (activeMode === 'on') {
@@ -57,14 +57,14 @@ process.stdin.on('end', () => {
         hookSpecificOutput: {
           hookEventName: 'UserPromptSubmit',
           additionalContext:
-            'ESSENCE MODE ACTIVE — default for everything you write (chat replies, code ' +
+            'ESSENCE MODE ACTIVE. Default for everything you write (chat replies, code ' +
             'comments, commits, PR/issue text, docs). Stand on its own: no reference to this ' +
-            'conversation, no reflexive hedging or preamble, and only what you actually mean — ' +
+            'conversation, no reflexive hedging or preamble, and only what you actually mean, ' +
             'not a word more. Normal grammar, not telegraphic.'
         }
       }));
     }
   } catch (e) {
-    // Silent fail — hooks must never block the prompt over a tracking error
+    // Silent fail: hooks must never block the prompt over a tracking error
   }
 });

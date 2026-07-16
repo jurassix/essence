@@ -1,4 +1,4 @@
-# essence — installer shim (Windows / PowerShell 5.1+).
+# essence: installer shim (Windows / PowerShell 5.1+).
 # Thin wrapper around bin/install.js; every flag passed here is forwarded.
 #
 # Local clone:

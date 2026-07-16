@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// essence — multi-agent installer.
+// essence: multi-agent installer.
 //
 // Detects which AI coding agents are present and installs essence for each:
 // Claude Code gets the native plugin (skill + always-on hooks). Agents without
@@ -63,7 +63,7 @@ function ruleContent() {
 const BLOCK_START = '<!-- essence:start (managed by essence installer, safe to re-run) -->';
 const BLOCK_END = '<!-- essence:end -->';
 
-// BLOCK_START/BLOCK_END contain regex metacharacters (parens) — escape them
+// BLOCK_START/BLOCK_END contain regex metacharacters (parens): escape them
 // before building a RegExp, or the parens are read as a capture group instead
 // of literal text and the match silently fails (blockRe.test would never be
 // true, so every re-run would append a duplicate block instead of replacing it).
@@ -189,7 +189,7 @@ function main() {
     console.log(`\n${p.label}:`);
     p.install(opts.dryRun);
     if (!p.autoActivates) {
-      console.log(`  not always-on for this agent — invoke /essence once per session to apply it.`);
+      console.log(`  not always-on for this agent: invoke /essence once per session to apply it.`);
     }
   }
   console.log('\nDone.');

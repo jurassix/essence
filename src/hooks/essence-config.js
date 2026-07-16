@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-// essence — shared configuration + flag-file helpers
+// essence: shared configuration + flag-file helpers
 //
 // essence only has two states: on (default) and off. Resolution order for the
 // default:
 //   1. ESSENCE_DEFAULT_MODE env var
 //   2. Repo-local config (checked-in, per-project default): <cwd>/.essence.json
 //      or <cwd>/.essence/config.json, walking up to the nearest ancestor that
-//      has one (stops at filesystem root) — lets a team pin a project default.
+//      has one (stops at filesystem root): lets a team pin a project default.
 //   3. User config: $XDG_CONFIG_HOME/essence/config.json, or
 //      ~/.config/essence/config.json, or %APPDATA%\essence\config.json on Windows.
 //   4. 'on'
@@ -81,7 +81,7 @@ function getDefaultMode() {
 
 // Symlink-safe, atomic flag write: refuses to write through a symlink at the
 // flag path itself, writes to a temp file then renames (atomic on POSIX and
-// NTFS), 0600 perms. Silent-fails on any filesystem error — the flag is
+// NTFS), 0600 perms. Silent-fails on any filesystem error: the flag is
 // best-effort, never worth crashing a hook over.
 function safeWriteFlag(flagPath, content) {
   try {

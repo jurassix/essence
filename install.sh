@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# essence — installer shim. Thin wrapper around bin/install.js; every flag
+# essence: installer shim. Thin wrapper around bin/install.js; every flag
 # you'd pass to that script can be passed here, it's just forwarded.
 #
 # Local clone:
 #   bash install.sh [flags]
 #
 # Not yet published to npm/GitHub, so there's no curl-pipe one-liner or npx
-# fallback — clone the repo and run this from inside it.
+# fallback: clone the repo and run this from inside it.
 
 set -euo pipefail
 

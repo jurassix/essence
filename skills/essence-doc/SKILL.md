@@ -17,7 +17,7 @@ description: >
 1. Read the target file.
 2. Rewrite it applying both essence rules from `skills/essence/SKILL.md`:
    - Cut everything that only makes sense to someone who saw the conversation that produced
-     this doc — the reader of this file was never in that conversation.
+     this doc: the reader of this file was never in that conversation.
    - Find what you actually mean in each paragraph and write only that. Collapse padded
      paragraphs to their real point; merge bullets that repeat the same idea; drop redundant
      examples once the pattern is shown once.
@@ -27,15 +27,15 @@ description: >
 4. Validate: from this skill's directory, run
    `python3 scripts/essence_doc.py validate <filepath>.original.md <filepath>`
    This confirms every code fence / inline code / URL / path from the original still appears
-   verbatim in the rewrite. It does not check prose quality — that's your judgment call, not
+   verbatim in the rewrite. It does not check prose quality: that's your judgment call, not
    the script's.
 5. If validation fails, restore the missing span exactly and re-run validation (up to 2
    retries). If it still fails, restore `<filepath>.original.md` over `<filepath>`, report the
    failure, and stop.
-6. Report the result: what changed, in essence — not a paragraph recapping the process.
+6. Report the result: what changed, in essence, not a paragraph recapping the process.
 
 ## Boundaries
 
 Only rewrites the file. Does not commit or open a PR. If the file mixes prose with large data
-blocks (config, generated tables), leave the data blocks untouched — only prose is essence's
+blocks (config, generated tables), leave the data blocks untouched: only prose is essence's
 target.

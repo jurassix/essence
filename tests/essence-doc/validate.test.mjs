@@ -1,6 +1,6 @@
 // essence-doc's mechanical guard: confirms code/URLs/paths survive an essence
 // rewrite verbatim. The prose rewrite itself is a judgment call for whichever
-// agent runs the skill — not something a script can validate — so these tests
+// agent runs the skill (not something a script can validate), so these tests
 // only exercise essence_doc.py's validate mode against hand-authored
 // before/after fixtures.
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-// essence — Claude Code SessionStart activation hook
+// essence: Claude Code SessionStart activation hook
 //
 // Runs on every session start:
 //   1. Writes the active-mode flag at $CLAUDE_CONFIG_DIR/.essence-active
 //   2. Emits the essence ruleset as SessionStart context (skipped if mode is 'off')
 //
 // Reads skills/essence/SKILL.md at runtime so edits to the source of truth
-// propagate automatically — no hardcoded duplicate ruleset to go stale.
+// propagate automatically; no hardcoded duplicate ruleset to go stale.
 
 const fs = require('fs');
 const path = require('path');
@@ -27,10 +27,10 @@ if (mode === 'off') {
 safeWriteFlag(flagPath, mode);
 
 // Candidate locations for the ruleset source, tried in order:
-//   1. $CLAUDE_PLUGIN_ROOT/skills/essence/SKILL.md — set by Claude Code when
+//   1. $CLAUDE_PLUGIN_ROOT/skills/essence/SKILL.md: set by Claude Code when
 //      invoking a plugin hook; authoritative when present.
-//   2. ../../skills/essence/SKILL.md — hook at <plugin_root>/src/hooks/.
-//   3. ../skills/essence/SKILL.md — standalone install with hooks and skill
+//   2. ../../skills/essence/SKILL.md: hook at <plugin_root>/src/hooks/.
+//   3. ../skills/essence/SKILL.md: standalone install with hooks and skill
 //      both under $CLAUDE_CONFIG_DIR directly.
 const candidates = [];
 if (process.env.CLAUDE_PLUGIN_ROOT) {
@@ -49,11 +49,11 @@ for (const candidate of candidates) {
   } catch (e) { /* try next candidate */ }
 }
 
-// Fallback ruleset if SKILL.md couldn't be read (e.g. a broken install) — the
+// Fallback ruleset if SKILL.md couldn't be read (e.g. a broken install): the
 // essentials only, not a full duplicate.
 if (!skillContent) {
   skillContent = [
-    'ESSENCE MODE ACTIVE — default for everything you write: chat replies, code',
+    'ESSENCE MODE ACTIVE. Default for everything you write: chat replies, code',
     'comments, commits, PR/issue text, docs, published copy.',
     '1. Make writing stand on its own: cut anything that only makes sense to',
     '   someone who saw this conversation (references to what was asked, hedging',

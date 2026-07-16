@@ -1,7 +1,7 @@
 {
   "name": "essence-installer",
   "version": "0.1.0",
-  "description": "essence installer — detects your AI coding agents and installs essence for each one.",
+  "description": "essence installer: detects your AI coding agents and installs essence for each one.",
   "license": "MIT",
   "homepage": "https://github.com/jurassix/essence",
   "repository": {

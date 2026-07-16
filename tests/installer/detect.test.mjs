@@ -1,4 +1,4 @@
-// essence installer tests — exercises bin/install.js as a subprocess (matches
+// essence installer tests: exercises bin/install.js as a subprocess (matches
 // how it's actually invoked) rather than importing internals, since the script
 // isn't structured as an importable module.
 
