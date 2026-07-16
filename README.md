@@ -42,23 +42,23 @@ the grammar. Different axis, same input.
 
 **Code comment**
 ```
-Before: // Fetches the user's profile from the database and returns it. Handles
-        // the case where the profile doesn't exist yet for brand-new users who
-        // haven't finished onboarding.
-After:  // profile may be missing until onboarding completes — caller must handle nil
+Before:  // Fetches the user's profile from the database and returns it. Handles
+         // the case where the profile doesn't exist yet for brand-new users who
+         // haven't finished onboarding.
+essence: // profile may be missing until onboarding completes — caller must handle nil
 ```
 
 **PR description**
 ```
-Before: Per our discussion, I split this into two PRs instead of one big one like
-        you suggested. This one only covers the backend endpoint — I didn't touch
-        the frontend since we agreed that could land as a follow-up once the API
-        is stable.
-After:  ## Bug
-        No endpoint exists for revoking an API key once issued.
-        ## Fix
-        Add `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending
-        API stabilization.
+Before:  Per our discussion, I split this into two PRs instead of one big one like
+         you suggested. This one only covers the backend endpoint — I didn't touch
+         the frontend since we agreed that could land as a follow-up once the API
+         is stable.
+essence: ## Bug
+         No endpoint exists for revoking an API key once issued.
+         ## Fix
+         Add `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending
+         API stabilization.
 ```
 
 **Meta-commentary, caught in the wild** — a real mistake, made while writing this very README:
