@@ -99,7 +99,3 @@ See [INSTALL.md](./INSTALL.md) for the per-agent matrix and manual steps.
 - `src/hooks/` — SessionStart / UserPromptSubmit hooks powering Claude Code's always-on mode
 - `bin/install.js` — multi-agent installer; `install.sh` / `install.ps1` are thin shims over it
 
-## Out of scope for v1
-
-Token-savings stats + statusline, an MCP tool-description compressor, a benchmark/eval harness.
-essence is language-preserving by nature (it never translates), so there's no separate mode for that.
