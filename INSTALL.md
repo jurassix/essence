@@ -1,7 +1,13 @@
 # Install essence
 
-Not published to a registry yet, so there's no curl-pipe one-liner — clone the repo and run the
-installer from inside it.
+**Claude Code** doesn't need a clone — the plugin manifest lives in this repo, so the marketplace
+mechanism reads it straight from GitHub:
+
+```bash
+claude plugin marketplace add jurassix/essence && claude plugin install essence@essence
+```
+
+Every other supported agent writes into a local rules file, so those need a clone:
 
 ```bash
 git clone https://github.com/jurassix/essence.git
@@ -48,10 +54,11 @@ and forward all flags to `bin/install.js` — use whichever matches your shell.
 
 ## Manual install (Claude Code)
 
-If you'd rather not let the installer shell out to `claude`:
+If you'd rather not let the installer shell out to `claude`, or you're installing from a local
+clone instead of GitHub:
 
 ```bash
-claude plugin marketplace add /path/to/essence
+claude plugin marketplace add jurassix/essence   # or: add /path/to/your/clone
 claude plugin install essence@essence
 ```
 

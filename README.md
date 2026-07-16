@@ -71,7 +71,14 @@ After:  ## Bug
 
 ## Install
 
-Not published to a registry yet — clone and run the installer:
+**Claude Code** — no clone needed, the plugin lives in this repo:
+
+```bash
+claude plugin marketplace add jurassix/essence && claude plugin install essence@essence
+```
+
+**Codex, Gemini, Cursor, Windsurf, or Cline** — these write into a local rules file, so clone and
+run the installer:
 
 ```bash
 git clone https://github.com/jurassix/essence.git
