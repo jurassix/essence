@@ -1,0 +1,2 @@
+description = "Write a PR description that stands on its own (bug + fix, nothing else)"
+prompt = "Write a PR description for {{args}} (or the current branch's diff if nothing is given), following the essence-pr skill: bug + fix only, no conversation residue, no padding."

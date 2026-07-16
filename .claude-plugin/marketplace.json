@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "essence",
+  "description": "Strip writing down to what the reader needs: only what you mean, not a word more.",
+  "owner": {
+    "name": "Clint Ayres"
+  },
+  "plugins": [
+    {
+      "name": "essence",
+      "description": "Only what you mean, not a word more. Applies to chat replies, code comments, commits, PR/issue text, and docs.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

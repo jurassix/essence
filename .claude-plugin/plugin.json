@@ -1,0 +1,33 @@
+{
+  "name": "essence",
+  "description": "Strip writing down to what the reader needs: only what you mean, not a word more. Applies to chat replies, code comments, commits, PR/issue text, and docs.",
+  "author": {
+    "name": "Clint Ayres"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/src/hooks/essence-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading essence..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/src/hooks/essence-mode-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "Tracking essence mode..."
+          }
+        ]
+      }
+    ]
+  }
+}

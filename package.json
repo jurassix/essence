@@ -1,0 +1,30 @@
+{
+  "name": "essence-installer",
+  "version": "0.1.0",
+  "description": "essence installer — detects your AI coding agents and installs essence for each one.",
+  "license": "MIT",
+  "homepage": "https://github.com/jurassix/essence",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurassix/essence.git"
+  },
+  "bin": {
+    "essence": "./bin/install.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test tests/installer/*.test.mjs tests/essence-doc/*.test.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "skills/",
+    "commands/",
+    ".claude-plugin/",
+    "README.md",
+    "INSTALL.md",
+    "LICENSE"
+  ]
+}
