@@ -43,26 +43,27 @@ but keeps full sentences and normal grammar.
 Before:  // Fetches the user's profile from the database and returns it. Handles
          // the case where the profile doesn't exist yet for brand-new users who
          // haven't finished onboarding.
+
 essence: // profile may be missing until onboarding completes; caller must handle nil
 ```
 
-**PR description**
+**PR description** (no fixed template; this is prose the reviewer needs, not a form to fill in):
 ```
 Before:  Per our discussion, I split this into two PRs instead of one big one like
          you suggested. This one only covers the backend endpoint; I didn't touch
          the frontend since we agreed that could land as a follow-up once the API
          is stable.
-essence: ## Bug
-         No endpoint exists for revoking an API key once issued.
-         ## Fix
-         Add `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending
-         API stabilization.
+
+essence: No endpoint exists for revoking an API key once issued. Adds
+         `DELETE /api-keys/:id`. Frontend follow-up is a separate PR, pending API
+         stabilization.
 ```
 
 **Meta-commentary, caught in the wild** (a real mistake, made while writing this very README):
 ```
 Before:  essence is the default for everything you write, not a mode that switches
          on for certain artifact types.
+
 essence: essence is the default for everything you write.
 ```
 "Not a mode that switches on for certain artifact types" only makes sense to someone who'd just
@@ -104,7 +105,7 @@ See [INSTALL.md](./INSTALL.md) for the per-agent matrix and manual steps.
 - `skills/essence/SKILL.md`: the ruleset, single source of truth, read at runtime by the
   activation hook and by the installer
 - `skills/essence-pr/`, `skills/essence-doc/`, `skills/essence-commit/`: deliverable-specific skills
-- `commands/`: Claude Code (`.md`) and Codex (`.toml`) slash-command pairs
+- `commands/`: Claude Code slash-command definitions (`.md`)
 - `src/hooks/`: SessionStart / UserPromptSubmit hooks powering Claude Code's always-on mode
 - `bin/install.js`: multi-agent installer; `install.sh` / `install.ps1` are thin shims over it
 

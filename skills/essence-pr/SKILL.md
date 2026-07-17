@@ -1,31 +1,23 @@
 ---
 name: essence-pr
 description: >
-  Write a PR/MR description that stands on its own: the bug and the proposed fix, nothing else.
-  No conversation residue, no test-plan padding unless it's needed. Use when user says
-  "write a PR description", "PR description", or invokes /essence-pr.
+  Write a PR/MR description that stands on its own: no conversation residue, no padding, only
+  what a reviewer who wasn't there needs. No fixed template; shape it the way you always would.
+  Use when user says "write a PR description", "PR description", or invokes /essence-pr.
 ---
 
 # essence-pr
 
 A reviewer opens this PR with no memory of the conversation that produced it. The description's
-only job: let them understand the bug and the fix without asking a single follow-up question.
+only job: let them understand what's wrong and why the fix is right, without asking a follow-up
+question.
 
-## Structure
+## No template
 
-Two sections, nothing more unless the change genuinely needs it:
-
-```
-## Bug
-<what was broken, in terms a reviewer who never saw the issue can verify against the diff>
-
-## Fix
-<what changed and why this is the correct fix, not a narration of the diff>
-```
-
-Add a third section only when the reviewer actually needs it:
-- **Test plan**: only if verification isn't obvious from CI, or a manual repro step is required
-- **Breaking change / migration note**: only if one actually exists
+essence doesn't prescribe a structure. Write it the way you always would: the repo's own PR
+template if one exists, two sentences if that's all the change needs, more if the change is
+genuinely complex. The shape is your call, same as ever. What essence adds is the filter, not
+the format: no conversation residue, no padding, nothing the reviewer needs outside context for.
 
 ## What never goes in
 

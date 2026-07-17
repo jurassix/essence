@@ -85,6 +85,6 @@ tight enough.
 - Security warnings and irreversible-action confirmations stay complete, never trimmed for length.
 - Leave internal scratch, planning notes, and private reasoning untouched: essence is for what
   others read, not for your own working notes.
-- Code, commit, and PR text: use the dedicated `/essence-commit`, `/essence-pr`, and `/essence-doc`
-  commands for the deepest pass on those artifact types; this baseline rule still applies to them
-  even without invoking those commands.
+- Code, commit, and PR text: use the dedicated `/essence-commit`, `/essence-pr`,
+  and `/essence-doc` commands for the deepest pass on those artifact types; this baseline
+  rule still applies to them even without invoking those commands.

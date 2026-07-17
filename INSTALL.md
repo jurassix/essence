@@ -27,7 +27,7 @@ each agent's block is replaced in place, not duplicated.
 | **Claude Code** | Runs `claude plugin marketplace add <repo>` and `claude plugin install essence@essence`. Hooks apply the ruleset every session automatically. | Yes |
 | **Codex CLI** | Writes the ruleset into `AGENTS.md` in the current directory (creates it if absent, otherwise inserts/replaces a marked block). | Yes |
 | **Gemini CLI** | Same, into `GEMINI.md`. | Yes |
-| **Cursor** | Writes to `.cursor/rules/essence.md`. | No: say "essence mode" or invoke `/essence` once per session |
+| **Cursor** | Writes to `.cursor/rules/essence.md`. | No: say "essence mode" once per session (no slash command is installed for this agent) |
 | **Windsurf** | Writes to `.windsurf/rules/essence.md`. | No: same as Cursor |
 | **Cline** | Writes to `.clinerules/essence.md`. | No: same as Cursor |
 

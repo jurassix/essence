@@ -189,7 +189,7 @@ function main() {
     console.log(`\n${p.label}:`);
     p.install(opts.dryRun);
     if (!p.autoActivates) {
-      console.log(`  not always-on for this agent: invoke /essence once per session to apply it.`);
+      console.log(`  not always-on for this agent: say "essence mode" once per session to apply it (no slash command is installed for it).`);
     }
   }
   console.log('\nDone.');

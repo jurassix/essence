@@ -13,7 +13,7 @@ agent's rules file. Edit it in one place.
 Layout:
 - `skills/essence/`: the always-on ruleset
 - `skills/essence-pr/`, `skills/essence-doc/`, `skills/essence-commit/`: deliverable-specific skills
-- `commands/`: Claude Code (`.md`) and Codex (`.toml`) slash-command pairs
+- `commands/`: Claude Code slash-command definitions (`.md`)
 - `src/hooks/`: SessionStart / UserPromptSubmit hooks for Claude Code's always-on mode
 - `bin/install.js`: multi-agent installer; `install.sh` / `install.ps1` are thin shims over it
 - `tests/`: installer tests (`node --test`) and essence-doc fixtures
